@@ -2,7 +2,7 @@ import logging
 
 DEFAULT_LEVEL = logging.DEBUG
 DEFAULT_CONFIG = [
-    (logging.StreamHandler(), logging.Formatter("[%(asctime)s] [%(levelname)s] %(message)s")),
+    (logging.StreamHandler(), logging.Formatter("[%(asctime)s] [%(levelname)s] [%(processName)s] %(message)s")),
 ]
 
 DEFAULT_HANDLERS = []
