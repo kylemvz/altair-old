@@ -1,6 +1,6 @@
 import logging
 
-DEFAULT_LEVEL = logging.DEBUG
+DEFAULT_LEVEL = logging.WARNING
 DEFAULT_CONFIG = [
     (logging.StreamHandler(), logging.Formatter("[%(asctime)s] [%(levelname)s] [%(processName)s] %(message)s")),
 ]

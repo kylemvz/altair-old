@@ -5,7 +5,6 @@ import queue as Q
 import gzip
 import json
 import os
-import traceback
 
 from altair.util.log import getLogger
 
@@ -74,8 +73,6 @@ def worker(q, output_dir, q2):
                         utf8 = (json_obj["content"].strip()+"\n").encode("utf-8").decode("utf-8")
                         py3_content = convert_to_py3(utf8)
                     except Exception as e:
-                        logger.info("TYPE: %s" % type(utf8))
-                        traceback.print_exc()
                         logger.info("Error converting, skipping: %s" % json_obj["id"])
                         q2.put(json_obj)
                         continue
